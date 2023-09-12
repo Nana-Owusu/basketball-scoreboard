@@ -12,64 +12,90 @@
     />
   </head>
 
-  <body>
+  <body class="bg-[#1B244A]">
     <section class="mx-auto mt-16 lg:w-[800px] bg-[#1B244A]">
-      <div
-        class="py-6 px-16 flex flex-col items-center md:flex-row md:justify-between"
-      >
-        <div>
-          <h2
-            class="text-[40px] text-center lg:text-[80px] text-white"
-            id="homewin"
-          >
-            HOME
-          </h2>
-          <div
-            class="py-[10px] px-[16px] bg-black w-[250px] text-center rounded-[8px]"
-          >
-            <p class="text-[120px] text-[#F94F6D]" id="scorelinehome">0</p>
-          </div>
-
-          <div class="flex gap-[15px] mt-6 justify-center">
-            <div class="points"><p onclick="pointOneHome()">+1</p></div>
-            <div class="points"><p onclick="pointTwoHome()">+2</p></div>
-            <div class="points"><p onclick="pointThreeHome()">+3</p></div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-[40px] lg:text-[80px] text-center text-white">
-            AWAY
-          </h2>
-          <div
-            class="py-[10px] px-[16px] bg-black w-[250px] text-center rounded-[8px]"
-          >
-            <p class="text-[120px] text-[#F94F6D]" id="scorelineaway">0</p>
-          </div>
-
-          <div class="flex gap-[15px] mt-6 justify-center">
-            <div class="points"><p onclick="pointOneAway()">+1</p></div>
-            <div class="points"><p onclick="pointTwoAway()">+2</p></div>
-            <div class="points"><p onclick="pointThreeAway()">+3</p></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid justify-center">
+      <div class="py-6 px-16">
         <div
-          class="py-[10px] px-[16px] bg-black w-[300px] text-center rounded-[8px] text-center"
+          class="flex flex-col place-items-center md:flex-row md:justify-center md:gap-20"
         >
-          <p class="text-[60px] text-[#F94F6D] text-center" id="scoresection">
-            --
+          <div>
+            <h2
+              class="text-[40px] text-center lg:text-[80px] text-white mb-6"
+              id="homewin"
+            >
+              HOME
+            </h2>
+            <div
+              class="py-[10px] px-[16px] bg-black w-[250px] text-center rounded-[8px] mb-6"
+            >
+              <p class="text-[120px] text-[#F94F6D]" id="scorelinehome">0</p>
+            </div>
+
+            <div
+              class="grid grid-cols-3 gap-[9px] md:gap-[15px] mt-6 justify-center mb-6"
+            >
+              <div class="points"><p onclick="pointOneHome()">+1</p></div>
+              <div class="points"><p onclick="pointTwoHome()">+2</p></div>
+              <div class="points"><p onclick="pointThreeHome()">+3</p></div>
+              <!-- negative -->
+              <div class="points">
+                <p onclick="takeOneHome()">-1</p>
+              </div>
+              <div class="points">
+                <p onclick="takeTwoHome()">-2</p>
+              </div>
+              <div class="points">
+                <p onclick="takeThreeHome()">-3</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-[40px] lg:text-[80px] text-center text-white mb-6">
+              AWAY
+            </h2>
+            <div
+              class="py-[10px] px-[16px] bg-black w-[250px] text-center rounded-[8px] mb-6"
+            >
+              <p class="text-[120px] text-[#F94F6D]" id="scorelineaway">0</p>
+            </div>
+
+            <div
+              class="grid grid-cols-3 gap-[9px] md:gap-[15px] mt-6 justify-center mb-6"
+            >
+              <div class="points"><p onclick="pointOneAway()">+1</p></div>
+              <div class="points"><p onclick="pointTwoAway()">+2</p></div>
+              <div class="points"><p onclick="pointThreeAway()">+3</p></div>
+              <!-- negative -->
+              <div class="points">
+                <p onclick="takeOneAway()">-1</p>
+              </div>
+              <div class="points">
+                <p onclick="takeTwoAway()">-2</p>
+              </div>
+              <div class="points">
+                <p onclick="takeThreeAway()">-3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid justify-center">
+          <div
+            class="py-[10px] px-[16px] bg-black w-[300px] text-center rounded-[8px] text-center"
+          >
+            <p class="text-[60px] text-[#F94F6D] text-center" id="scoresection">
+              --
+            </p>
+          </div>
+
+          <p
+            class="text-[50px] cursor-pointer text-center mt-6"
+            onclick="reset()"
+          >
+            RESET
           </p>
         </div>
-
-        <p
-          class="text-[50px] cursor-pointer text-center mt-6"
-          onclick="reset()"
-        >
-          RESET
-        </p>
       </div>
     </section>
     <script src="main.js"></script>

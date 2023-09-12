@@ -4,6 +4,7 @@ let scoreSection = document.getElementById("scoresection")
 let countHome = 0
 let countAway = 0
 let goal = "Goal 🎉"
+let noGoal = "No Goal 😩"
 
 //scoreline Home
 function pointOneHome() {
@@ -24,6 +25,27 @@ function pointThreeHome() {
     scoreSection.textContent = goal
 }
 
+//Negative Home
+
+function takeOneHome() {
+    countHome -= 1
+    scoreLineHome.textContent = countHome
+    scoreSection.textContent = noGoal
+}
+
+function takeTwoHome() {
+    countHome -= 2
+    scoreLineHome.textContent = countHome
+    scoreSection.textContent = noGoal
+}
+
+function takeThreeHome() {
+    countHome -= 3
+    scoreLineHome.textContent = countHome
+    scoreSection.textContent = noGoal
+}
+
+
 
 //scoreline Away
 function pointOneAway() {
@@ -42,6 +64,26 @@ function pointThreeAway() {
     countAway += 3
     scoreLineAway.textContent = countAway
     scoreSection.textContent = goal
+}
+
+//Negative Away
+
+function takeOneAway() {
+    countAway -= 1
+    scoreLineAway.textContent = countAway
+    scoreSection.textContent = noGoal
+}
+
+function takeTwoAway() {
+    countAway -= 2
+    scoreLineAway.textContent = countAway
+    scoreSection.textContent = noGoal
+}
+
+function takeThreeAway() {
+    countAway -= 3
+    scoreLineAway.textContent = countAway
+    scoreSection.textContent = noGoal
 }
 
 //Reset score board
